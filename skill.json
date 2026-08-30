@@ -1,0 +1,38 @@
+{
+  "name": "genpark-multi-tenant-gitlab-webhook-event-router-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-tenant GitLab webhook event router dispatching real-time CI/CD, merge request, and issue triggers.",
+  "author": "genpark",
+  "category": "webhook-router",
+  "tags": [
+    "gitlab-webhook",
+    "event-router",
+    "devops-automation",
+    "merge-request-agent",
+    "realtime-dispatch"
+  ],
+  "inputs": {
+    "webhook_event_type": {
+      "type": "string"
+    },
+    "payload_json": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "event_dispatch_id": {
+      "type": "string"
+    },
+    "subscribers_notified_count": {
+      "type": "integer"
+    },
+    "signature_verification_passed": {
+      "type": "boolean"
+    },
+    "event_audit_stream_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
